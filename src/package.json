@@ -1,0 +1,10 @@
+{
+  "name": "spritemaker",
+  "main": "index.html",
+  "window": {
+    "width": 700,
+    "height": 650,
+    "icon": "css/images/2c-logo.png",
+    "toolbar": false
+  }
+}

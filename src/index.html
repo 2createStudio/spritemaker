@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>2create - Spritemaker</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-notify.css" />
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-notify.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<h1 class="text-center">Sprite Maker</h1>
+
+			<hr />
+
+			<form action="">
+				<div class="form-group">
+					<label for="src">Source folder:</label>
+					<input type="file" id="src" name="src" nwdirectory class="form-control" />
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					<label for="algorithm">Algorithm:</label>
+					<select name="algorithm" id="algorithm" class="form-control">
+						<option value="top-down">top-down</option>
+						<option value="left-right">left-right</option>
+						<option value="diagonal">diagonal</option>
+						<option value="alt-diagonal">alt-diagonal</option>
+						<option value="binary-tree" selected>binary-tree</option>
+					</select>
+				</div><!-- /.form-group -->
+
+				<table class="table table-bordered">
+					<tr>
+						<th>top-down</th>
+						<th>left-right</th>
+						<th>diagonal</th>
+						<th>alt-diagonal</th>
+						<th>binary-tree</th>
+					</tr>
+					<tr class="text-center">
+						<td><img src="css/images/top-down.png" alt="" width="16" height="48" /></td>
+						<td><img src="css/images/left-right.png" alt="" width="48" height="16" /></td>
+						<td><img src="css/images/diagonal.png" alt="" width="48" height="48" /></td>
+						<td><img src="css/images/alt-diagonal.png" alt="" width="48" height="48" /></td>
+						<td><img src="css/images/binary-tree.png" alt="" width="32" height="32" /></td>
+					</tr>
+				</table><!-- /.table table-bordered -->
+
+				<div class="form-group">
+					<label for="padding">Padding:</label>
+					<input type="number" id="padding" name="padding" class="form-control" value="2" min="0" />
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					<label for="padding">Type:</label>
+					<div class="radio">
+					    <label>
+					      <input type="radio" name="hd" value="false" checked> Regular
+					    </label>
+					</div>
+
+					<div class="radio">
+					    <label>
+					      <input type="radio" name="hd" value="true"> Retina
+					    </label>
+					</div>
+				</div><!-- /.form-group -->
+
+				<div class="form-group">
+					<button type="submit" class="btn btn-success">Start</button>
+				</div><!-- /.form-group -->
+			</form>
+
+			<div class="notifications bottom-right">
+				
+			</div><!-- /.notifications bottom-right -->
+		</div><!-- /.col-md-6 -->
+	</div><!-- /.row -->
+</div><!-- /.container -->
+</body>
+</html>

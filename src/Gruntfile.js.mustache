@@ -1,0 +1,39 @@
+module.exports = function (grunt) {
+
+    var rimraf = require('rimraf');
+
+    grunt.initConfig({
+        spriteMaker:{
+            all: {
+                src: '{{ src }}',
+                destImg: '{{ dist }}',
+                destCSS: '{{ dist }}',
+                hd: {{ hd }},
+                algorithm: '{{ algorithm }}',
+                padding: {{ padding }}
+            }
+        },
+        execute: {
+            before_after: {
+                after: function(grunt, options) {
+                    var config = grunt.config.get();
+
+                    if (config.sprite.hd) {
+                        rimraf(process.cwd() + '/temp', function(error) {
+                            console.log(error);
+                        });
+
+                        rimraf(config.sprite.hd.destCSS, function(error) {
+                            console.log(error);
+                        });
+                    }
+                }
+            }
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-spritemaker');
+    grunt.loadNpmTasks('grunt-execute');
+    grunt.registerTask('sprite', ['spriteMaker', 'execute']);
+
+}

@@ -1,0 +1,11 @@
+{
+  "name": "spritemaker",
+  "version": "0.1.0",
+  "description": "CSS spritemaker with grunt & node-webkit",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "~0.4.4",
+    "grunt-zipup": "~0.1.6",
+    "load-grunt-tasks": "~0.4.0"
+  }
+}
