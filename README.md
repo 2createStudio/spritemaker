@@ -2,7 +2,7 @@
 
 ##How to use?##
 
-1. Install [GraphicsMagick](http://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/1.3.19/).
+1. Install [GraphicsMagick](http://sourceforge.net/projects/graphicsmagick/files/graphicsmagick-binaries/1.3.19/).
 2. Download the latest version from **/build** folder.
 3. Unzip.
 4. Run start.bat
